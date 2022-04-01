@@ -1,0 +1,2 @@
+class Norgmar < ApplicationRecord
+end

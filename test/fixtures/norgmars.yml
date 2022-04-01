@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nazwa: MyText
+  pid: 1
+  nid: 1
+  opis: MyText
+
+two:
+  nazwa: MyText
+  pid: 1
+  nid: 1
+  opis: MyText
