@@ -1,4 +1,4 @@
-class KlansController < ApplicationController
+class Api::V1::KlansController < ApplicationController
   before_action :set_klan, only: [:show, :update, :destroy]
 
   # GET /klans

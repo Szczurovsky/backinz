@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  resources :klans
-  resources :norgmars
-
-  root to: "norgmars#index"
+ 
+  namespace :api do
+    namespace :v1 do
+      resources :klans
+      resources :norgmars
+    end
+  end
+  root to: "api/v1/norgmars#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

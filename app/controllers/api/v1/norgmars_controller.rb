@@ -1,4 +1,4 @@
-class NorgmarsController < ApplicationController
+class Api::V1::NorgmarsController < ApplicationController
   before_action :set_norgmar, only: [:show, :update, :destroy]
 
   # GET /norgmars
