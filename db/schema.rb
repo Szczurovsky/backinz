@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_01_222443) do
+ActiveRecord::Schema.define(version: 2022_04_03_201641) do
 
   create_table "klans", force: :cascade do |t|
     t.text "nazwa"
@@ -34,6 +34,18 @@ ActiveRecord::Schema.define(version: 2022_04_01_222443) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "aid"
+  end
+
+  create_table "postacs", force: :cascade do |t|
+    t.text "imie"
+    t.json "statystyki", default: []
+    t.json "klan", default: []
+    t.json "profesja", default: []
+    t.json "umiejetnosci", default: []
+    t.json "przedmioty", default: []
+    t.json "p_fab", default: []
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

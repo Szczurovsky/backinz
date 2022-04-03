@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  imie: MyText
+  statystyki: 
+  klan: MyText
+  profesja: MyText
+  umiejetnosci: MyText
+  przedmioty: MyText
+  p_fab: MyText
+
+two:
+  imie: MyText
+  statystyki: 
+  klan: MyText
+  profesja: MyText
+  umiejetnosci: MyText
+  przedmioty: MyText
+  p_fab: MyText
