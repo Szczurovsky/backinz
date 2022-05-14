@@ -11,7 +11,8 @@ class Api::V3::UsersController < ApplicationController
               errors: ['no users found']
           }
          end
-    enddef show
+    end
+    def show
        @user = User.find(params[:id])
            if @user
               render json: {
@@ -39,8 +40,9 @@ class Api::V3::UsersController < ApplicationController
                 errors: @user.errors.full_messages
             }
             end
-      endprivate
-      
+      end
+
+    private
      def user_params
          params.require(:user).permit(:username, :password, :password_confirmation)
      end
