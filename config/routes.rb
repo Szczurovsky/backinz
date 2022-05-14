@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       resources :norgmars
       resources :postacs
     end
-    namespace :v3 do]
+    namespace :v3 do
       resources :klans
       resources :norgmars
       resources :postacs
