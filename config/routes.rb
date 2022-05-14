@@ -11,9 +11,7 @@ Rails.application.routes.draw do
       resources :norgmars
       resources :postacs
     end
-    namespace :v3 do
-      resources :users, only: [:create,:show,:index]
-      resources :session
+    namespace :v3 do]
       resources :klans
       resources :norgmars
       resources :postacs
