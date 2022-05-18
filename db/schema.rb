@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_14_144420) do
+ActiveRecord::Schema.define(version: 2022_05_15_135311) do
+
+  create_table "characters", force: :cascade do |t|
+    t.text "nick"
+    t.json "statystyki", default: []
+    t.json "klan", default: []
+    t.json "profesja", default: []
+    t.json "umiejetnosci", default: []
+    t.json "przedmioty", default: []
+    t.json "p_fab", default: []
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_characters_on_user_id"
+  end
 
   create_table "klans", force: :cascade do |t|
     t.text "nazwa"

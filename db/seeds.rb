@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# require 'database_cleaner'
+require 'database_cleaner'
 
-# DatabaseCleaner.clean_with(:truncation)
+DatabaseCleaner.clean_with(:truncation)
 
 Norgmar.create({nazwa: "Kronika Magnusa Mądreso, Parnam 1607 roku kalendarza kontynentalnego.", pid: 0,aid:1, nid: 2, opis:" … i  zszedł lud wysokich gór Norgmaru na wyżyny między rzekami Kava i Reva, siejąc mord i pożogę. Barbarzyńcy zwykli wołać, że oto wola pani Tary ich krwiożerczej bogini śmierci. "})
 Norgmar.create({nazwa: "Kronikas Magnusa Mądrego, Parnam 1607 roku kalendarza kontynentalnego.", pid: 1, aid:2, nid: 3, opis:"Ich pragnienie mordu zatrzymało się po trzech stuleciach na brzegach wielkiego morza wschodniego pokonani przez Borysa Wielkiego pierwszego księcia wielkiego księstwa Robarii, zaprzestali dalszego podboju, stąd ma teza, że jeno siłą można przemawiać do Norgmarytów …"})
@@ -30,3 +30,4 @@ Klan.create({
 })
 
 Postac.create({imie:"szczurovsky", statystyki:[{sila:1, sila_woli:1, oglada:1}], klan:[{nazwa:"", jarl:"", nastepca:"", stolica:"", polozenie:"", opis:"", premie:{}}], profesja:{nazwa:"", wyposazenie_start:"",umiejetnosci:[{nazwa:"", opis:"", premie_um:""}],premie:[{}]},umiejetnosci:[{}], przedmioty:[{}], p_fab:{step:0}})
+Character.create({nick:"nich", statystyki:[{sila:1, sila_woli:1, oglada:1}], klan:[{nazwa:"", jarl:"", nastepca:"", stolica:"", polozenie:"", opis:"", premie:{}}], profesja:{nazwa:"", wyposazenie_start:"",umiejetnosci:[{nazwa:"", opis:"", premie_um:""}],premie:[{}]},umiejetnosci:[{}], przedmioty:[{}], p_fab:{step:0}})
