@@ -1,6 +1,6 @@
 class CreateCharacters < ActiveRecord::Migration[6.1]
   def change
-    drop_table :characters
+    
     create_table :characters do |t|
       t.text :nick
       t.json :statystyki, default:[]
