@@ -25,6 +25,7 @@ Rails.application.routes.draw do
       resources :klans
       resources :norgmars
       resources :postacs
+      resources :users
       delete :logout, to: "sessions#logout"
       get :logged_in, to: "sessions#logged_in"
     end
