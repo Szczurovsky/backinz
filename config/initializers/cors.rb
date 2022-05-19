@@ -20,12 +20,12 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     withCredentials: true
   end
   allow do
-    origin "http://inzynierkatest.herokuapp.com/"
+    origin "https://inzynierkatest.herokuapp.com/"
     resource "*", headers: :any, methods:[:get, :post, :put, :patch, :delete, :options, :head],
     withCredentials: true
   end
   allow do
-    origin "http://inzynierka-test.herokuapp.com/"
+    origin "https://inzynierka-test.herokuapp.com/"
     resource "*", headers: :any, methods:[:get, :post, :put, :patch, :delete, :options, :head],
     withCredentials: true
   end
