@@ -25,13 +25,8 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   #   withCredentials: true
   # end
   allow do
-    origins "https://inzynierka-test.herokuapp.com/"
-    resource "*", headers: {
-      'Access-Control-Allow-Credentials':true,
-      'Access-Control-Allow-Origin': https://inzynierka-test.herokuapp.com/,
-      
-
-    }, methods:[:get, :post, :put, :patch, :delete, :options, :head],
+    origins "https://inzynierka-test.herokuapp.com"
+    resource "*", headers: :any, methods:[:get, :post, :put, :patch, :delete, :options, :head],
     withCredentials: true
   end
 end
