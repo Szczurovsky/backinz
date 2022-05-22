@@ -45,6 +45,6 @@ module Back
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.middleware.use ActionDispatch::Session::CacheStore, key: "_auth_app"
-    config.middleware.use ActionDispatch::Cache
+    config.middleware.use ActionDispatch::Cookies
   end
 end
