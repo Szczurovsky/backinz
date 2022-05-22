@@ -44,7 +44,7 @@ module Back
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
-    config.middleware.use ActionDispatch::Session::CookieStore, key: "_auth_app"
+    config.middleware.use ActionDispatch::Session::CacheStore, key: "_auth_app"
     config.middleware.use ActionDispatch::Cookies
   end
 end
