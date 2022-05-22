@@ -9,7 +9,7 @@ class Api::V3::SessionsController < ApplicationController
       puts "user session"
       session[:user_id]= user.id
       render json: {
-        login: "udane logowanie"
+        login: "udane logowanie",
         status: :created,
         logged_in: true,
         user: user

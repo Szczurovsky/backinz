@@ -9,7 +9,7 @@ class Api::V3::RegistrationsController < ApplicationController
             puts "dziala!!! user szukany"
             session[:user_id] = user.id
             render json:{
-                rejestration: "rejestracja udana"
+                rejestration: "rejestracja udana",
                 status: :created,
                 user: user
             }
