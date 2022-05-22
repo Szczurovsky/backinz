@@ -1,5 +1,5 @@
     if Rails.env == "production"
-        Rails.application.config.session_store :session_store, key: "_auth_app", domain: "inzynierkatest.herokuapp.com/api/v3"
+        Rails.application.config.session_store :session_store, key: "_auth_app", domain: "inzynierkatest.herokuapp.com"
     else
         Rails.application.config.session_store :session_store, key: "_auth_app"
 

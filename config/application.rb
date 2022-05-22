@@ -31,13 +31,13 @@ module Back
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.session_store :cookie_store, key: '_auth_app'
+    # config.session_store :cookie_store, key: '_auth_app'
 
 # Required for all session management (regardless of session_store)
   
 
     # config.middleware.use config.session_store, config.session_options
-    config.middleware.use ActionDispatch::Cookies
+    # config.middleware.use ActionDispatch::Cookies
     
 
     # Only loads a smaller set of middleware suitable for API only apps.
