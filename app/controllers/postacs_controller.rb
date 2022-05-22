@@ -1,4 +1,4 @@
-class Api::V3::PostacsController < ApplicationController
+class PostacsController < ApplicationController
   before_action :set_postac, only: [:show, :update, :destroy]
 
   # GET /postacs
