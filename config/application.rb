@@ -31,7 +31,7 @@ module Back
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    # config.session_store :cookie_store, key: '_interslice_session'
+    config.session_store :cookie_store, key: '_interslice_session'
 
 # Required for all session management (regardless of session_store)
   
