@@ -6,7 +6,6 @@ class Api::V3::SessionsController < ApplicationController
     .try(:authenticate, params["user"]["password"])
 
     if user
-     
       session[:user_id]= user.id
       render json: {
         login: "udane logowanie",
@@ -22,7 +21,6 @@ class Api::V3::SessionsController < ApplicationController
   def logged_in
     if @current_user
       render json: {
-        session: "sesja logged in",
         logged_in: true,
         user: @current_user
       }
