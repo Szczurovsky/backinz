@@ -1,4 +1,4 @@
-class Api::V3::SessionsController < ApplicationController
+class SessionsController < ApplicationController
   include CurrentUserConcern
   def create
     user = User

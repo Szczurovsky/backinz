@@ -1,4 +1,4 @@
-class Api::V3::UsersController < ApplicationController
+class UsersController < ApplicationController
     def index
         @users = User.all
            if @users
