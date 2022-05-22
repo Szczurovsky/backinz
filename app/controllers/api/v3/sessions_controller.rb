@@ -9,7 +9,7 @@ class Api::V3::SessionsController < ApplicationController
       cookies[:dawod] = "Dawd"
       session[:user_id]= user.id
       render json: {
-       
+       dzialanie: "dzialam"
         status: :created,
         logged_in: true,
         user: user
