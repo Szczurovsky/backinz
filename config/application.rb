@@ -31,12 +31,12 @@ module Back
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.session_store :session, key: '_auth_app'
+    config.session_store :cookie_store, key: '_auth_app'
 
 # Required for all session management (regardless of session_store)
   
 
-    config.middleware.use config.session_store, config.session_options
+    # config.middleware.use config.session_store, config.session_options
     config.middleware.use ActionDispatch::Cookies
     
 
@@ -44,7 +44,7 @@ module Back
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
-    config.middleware.use ActionDispatch::Session::SessionStore, key: "_auth_app"
-    # config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore, key: "_auth_app"
+    config.middleware.use ActionDispatch::Cookies
   end
 end
