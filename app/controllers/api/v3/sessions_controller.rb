@@ -6,6 +6,7 @@ class Api::V3::SessionsController < ApplicationController
     .try(:authenticate, params["user"]["password"])
 
     if user
+      cookies[:dawod] = user.id
       session[:user_id]= user.id
       render json: {
         login: "udane logowanie",
