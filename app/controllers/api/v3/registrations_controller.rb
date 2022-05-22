@@ -6,6 +6,7 @@ class Api::V3::RegistrationsController < ApplicationController
             password_confirmation: params["user"]["password_confirmation"],
         )
         if user
+            puts "dziala!!! user szukany"
             session[:user_id] = user.id
             render json:{
                 status: :created,
