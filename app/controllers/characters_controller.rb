@@ -3,9 +3,9 @@ class CharactersController < ApplicationController
 
   # GET /characters
   def index
-    @characters = Character.find(params[:user_id])
+    # @characters = Character.find(params[:user_id])
 
-    render json: @characters
+    render json: @character
   end
 
   # GET /characters/1
