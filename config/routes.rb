@@ -32,11 +32,16 @@ Rails.application.routes.draw do
   end
   resources :registrations, only: [:create]
   resources :sessions, only: [:create]
-  resources :characters
+
   resources :klans
+  
   resources :norgmars
   resources :postacs
-  resources :users
+  resources :users do
+    resources :characters
+  end
+ 
+  
   delete :logout, to: "sessions#logout"
   get :logged_in, to: "sessions#logged_in"
   root to: "api/v2/norgmars#index"
