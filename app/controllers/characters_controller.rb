@@ -32,7 +32,7 @@ class CharactersController < ApplicationController
     #   render json: @character.errors, status: :unprocessable_entity
     # end
     character = Character.find(params[:user_id])
-    character.update(character_params)
+    character.update(params)
     render json: @character
   end
 
