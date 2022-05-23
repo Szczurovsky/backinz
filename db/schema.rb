@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2022_05_15_135311) do
 
   create_table "characters", force: :cascade do |t|
     t.text "nick"
-    t.json "statystyki", default: []
+    t.text "statystyki", default: []
     t.json "klan", default: []
     t.json "profesja", default: []
     t.json "umiejetnosci", default: []
