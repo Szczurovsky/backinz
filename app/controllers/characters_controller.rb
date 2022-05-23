@@ -26,11 +26,14 @@ class CharactersController < ApplicationController
 
   # PATCH/PUT /characters/1
   def update
-    if @character.update(character_params)
-      render json: @character
-    else
-      render json: @character.errors, status: :unprocessable_entity
-    end
+    # if @character.update(character_params)
+    #   render json: @character
+    # else
+    #   render json: @character.errors, status: :unprocessable_entity
+    # end
+    character = Character.find(params[:user_id])
+    character.update(character_params)
+    render json: @character
   end
 
   # DELETE /characters/1
