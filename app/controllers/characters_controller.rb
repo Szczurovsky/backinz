@@ -32,7 +32,7 @@ class CharactersController < ApplicationController
     #   render json: @character.errors, status: :unprocessable_entity
     # end
     character = Character.find(params[:user_id])
-    character.update(params)
+    character.update(character_params)
     render json: @character
   end
 
@@ -48,7 +48,7 @@ class CharactersController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    # def character_params
-    #   params.require(:character).permit(:nick, :statystyki, :klan, :profesja, :umiejetnosci, :przedmioty, :p_fab,:staty)
-    # end
+    def character_params
+      params.require(:character).permit(:nick, :statystyki, :klan, :profesja, :umiejetnosci, :przedmioty, :p_fab,:staty)
+    end
 end
