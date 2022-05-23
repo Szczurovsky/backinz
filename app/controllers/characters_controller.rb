@@ -1,11 +1,11 @@
 class CharactersController < ApplicationController
-  before_action :set_character, only: [:show, :update, :destroy]
+  before_action :set_character, only: [:get, :show, :update, :destroy]
 
   # GET /characters
   def index
-    @characters = Character.find(params[:user_id])
+    # @characters = Character.find(params[:user_id])
 
-    render json: @characters
+    render json: @character
   end
 
   # GET /characters/1
